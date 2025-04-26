@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehabilitation Approaches - Muscular System Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+     <style>
+         /* Specific layout for this page */
+         .rehab-grid {
+             display: grid;
+             grid-template-columns: 1fr; /* Single column for categories */
+             gap: 3rem; /* Space between categories */
+             margin-top: 2rem;
+         }
+
+         .rehab-category {
+             display: grid;
+             grid-template-columns: 250px 1fr; /* Fixed width for image, rest for text */
+             gap: 2rem;
+             align-items: center; /* Vertically center items in the row */
+             padding-bottom: 2rem;
+             border-bottom: 1px dashed rgba(var(--primary-accent-rgb, 158, 43, 37), 0.2);
+         }
+         .rehab-grid > .rehab-category:last-child {
+             border-bottom: none;
+             padding-bottom: 0;
+         }
+
+         /* Alternate image/text order */
+         .rehab-category:nth-child(even) {
+             grid-template-columns: 1fr 250px; /* Text first, then image */
+         }
+         .rehab-category:nth-child(even) .rehab-image {
+             grid-column: 2 / 3; /* Explicitly place image in 2nd col */
+         }
+          .rehab-category:nth-child(even) .rehab-text {
+             grid-column: 1 / 2; /* Explicitly place text in 1st col */
+             text-align: right; /* Align text to the right */
+         }
+         body.light-theme .rehab-category:nth-child(even) .rehab-text {
+             text-align: left; /* Keep text left aligned in light mode for readability */
+         }
+         /* End alternating order */
+
+
+         .rehab-image img {
+            width: 100%;
+            height: auto;
+            max-height: 220px; /* Control max image height */
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            display: block;
+         }
+
+         .rehab-text h2 {
+             /* Uses default h2 styles */
+             margin-bottom: 0.75rem;
+             display: inline-block; /* Don't force full width */
+             border-bottom: none;
+             padding-bottom: 0;
+             font-size: 1.6em; /* Slightly larger title */
+             color: var(--secondary-accent); /* Use accent color */
+             text-align: left; /* Default left alignment */
+         }
+         .rehab-category:nth-child(even) .rehab-text h2 {
+             text-align: right; /* Match text alignment */
+         }
+
+
+         .rehab-text p {
+             font-size: 0.95rem;
+             color: var(--text-muted);
+             margin-bottom: 0; /* Remove default bottom margin */
+             line-height: 1.7;
+         }
+         /* Optional: Style bold text */
+        .rehab-text b {
+             color: var(--text-default); /* Make bold text slightly less muted */
+             font-weight: 600; /* Ensure it's visibly bold */
+        }
+
+         @media (max-width: 768px) {
+             .rehab-category,
+             .rehab-category:nth-child(even) {
+                 grid-template-columns: 1fr; /* Stack image and text */
+                 gap: 1.5rem;
+                 text-align: center; /* Center text below image */
+             }
+             .rehab-image {
+                 max-width: 80%; /* Limit image width when stacked */
+                 margin: 0 auto; /* Center image */
+                 grid-column: auto; /* Reset explicit column */
+             }
+              .rehab-text {
+                 grid-column: auto; /* Reset explicit column */
+                 text-align: center !important; /* Force center alignment */
+              }
+             .rehab-text h2 {
+                 text-align: center !important; /* Force center alignment */
+                 font-size: 1.4em;
+             }
+         }
+    </style>
+</head>
+<body>
+    <div class="mouse-follower"></div>
+    <!-- Navbar (Keep as is) -->
+    <nav class="navbar"> <a href="index.html#home" class="logo"> <i class="fas fa-dumbbell logo-icon"></i> <span>Muscular System</span> </a> <ul class="nav-links"> <li><a href="index.html#home" class="nav-link"><i class="fas fa-home nav-icon"></i><span class="nav-label">Home</span></a></li> <li><a href="index.html#explorer" class="nav-link"><i class="fas fa-cube nav-icon"></i><span class="nav-label">3D Explorer</span></a></li> <li><a href="index.html#foundations" class="nav-link"><i class="fas fa-book nav-icon"></i><span class="nav-label">Foundations</span></a></li> <li><a href="index.html#applications" class="nav-link"><i class="fas fa-flask nav-icon"></i><span class="nav-label">Applications</span></a></li> <li><a href="index.html#research" class="nav-link"><i class="fas fa-microscope nav-icon"></i><span class="nav-label">Research</span></a></li> </ul> <div class="nav-actions"> <button class="nav-action-btn search-btn" aria-label="Search"><i class="fas fa-search"></i></button> <button class="nav-action-btn theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button> </div> </nav>
+    <!-- Main Content -->
+    <main class="detail-content">
+        <h1>Rehabilitation Approaches</h1>
+        <p>Recovering full function after muscle injuries often requires a blend of therapeutic techniques to address pain, mobility, strength, and education.</p>
+
+        <div class="rehab-grid">
+            <!-- Category 1: Exercise -->
+            <div class="rehab-category">
+                <div class="rehab-image">
+                    <img src="bands.webp" alt="Patient performing therapeutic exercises with resistance bands">
+                </div>
+                <div class="rehab-text">
+                    <h2>Therapeutic Exercise</h2>
+                    <p>The cornerstone of rehabilitation. Exercises are carefully chosen and progressed to restore <b>flexibility</b> (<b>range of motion</b>), build <b>strength</b> and <b>endurance</b> (using <b>resistance</b>), and improve <b>balance</b> and <b>coordination</b> (<b>proprioception</b>).</p>
+                </div>
+            </div>
+
+            <!-- Category 2: Manual Therapy -->
+            <div class="rehab-category">
+                 <div class="rehab-text">
+                    <h2>Manual Therapy</h2>
+                    <p>Hands-on techniques by skilled therapists. Includes <b>joint mobilization</b> to improve movement, <b>massage</b> and <b>myofascial release</b> to reduce <b>muscle tightness</b>, alleviate <b>pain</b>, and enhance <b>tissue mobility</b>.</p>
+                </div>
+                <div class="rehab-image">
+                    <img src="manualtherapy.jpeg" alt="Therapist applying manual therapy to a patient's shoulder">
+                </div>
+            </div>
+
+            <!-- Category 3: Modalities -->
+             <div class="rehab-category">
+                 <div class="rehab-image">
+                     <img src="electrotherapy.jpeg" alt="Application of therapeutic modality like electrotherapy">
+                 </div>
+                <div class="rehab-text">
+                    <h2>Modalities</h2>
+                    <p>Physical agents supplement treatment. <b>Heat packs</b> relax muscles, <b>cold packs</b> reduce swelling, <b>electrical stimulation</b> (<b>TENS</b>/<b>NMES</b>) can manage <b>pain</b> or <b>activate muscles</b>, and <b>therapeutic ultrasound</b> may aid <b>tissue healing</b>.</p>
+                </div>
+            </div>
+
+            <!-- Category 4: Education -->
+             <div class="rehab-category">
+                  <div class="rehab-text">
+                    <h2>Patient Education</h2>
+                    <p>Empowering the patient is key. Education includes <b>understanding the condition</b>, learning <b>self-management techniques</b>, practicing <b>proper body mechanics</b>, adhering to <b>home exercises</b>, and <b>preventing re-injury</b>.</p>
+                 </div>
+                 <div class="rehab-image">
+                     <img src="therapist.jpeg" alt="Therapist explaining an exercise or model to a patient">
+                 </div>
+            </div>
+        </div>
+
+
+        <a href="index.html#applications" class="back-link" style="margin-top: 2rem;"> <i class="fas fa-arrow-left"></i> Back to Applications </a>
+    </main>
+    <!-- Footer (Keep as is - assuming social links were updated previously) -->
+     <footer class="footer"> <div class="footer-content"> <div class="footer-section"> <h4>Connect With Us</h4> <p>Follow us...</p> <div class="social-links"> <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> <a href="#" class="social-link" aria-label="Github"><i class="fab fa-github"></i></a> <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a> </div> </div> <div class="footer-section"> <h4>About</h4> <p>An interactive platform...</p> <ul style="list-style: none; padding: 0; margin-top: 1rem; font-size: 0.9rem; line-height: 1.8;"> <li><a href="index.html#explorer" style="color: var(--text-muted); text-decoration: none;">3D Explorer</a></li> <li><a href="index.html#foundations" style="color: var(--text-muted); text-decoration: none;">Foundations</a></li> <li><a href="#" style="color: var(--text-muted); text-decoration: none;">Contact Us</a></li> </ul> </div> <div class="footer-section"> <h4>Newsletter</h4> <p>Stay updated...</p> <form class="newsletter-form"> <input type="email" placeholder="Your email address" required aria-label="Email for newsletter"> <button type="submit">Subscribe</button> </form> </div> </div> <div class="footer-bottom"> <p>© <span id="current-year">2024</span> Muscular System Explorer. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p> </div> </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

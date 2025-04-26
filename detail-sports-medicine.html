@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Medicine Aspects - Muscular System Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+     <style>
+        /* Specific layout for this page */
+        .feature-section {
+            display: flex;
+            flex-direction: column; /* Stack image and text */
+            align-items: center; /* Center items */
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(var(--primary-accent-rgb, 158, 43, 37), 0.1);
+        }
+         .feature-section:last-child { border-bottom: none; }
+
+        .feature-section img {
+            width: 100%;
+            max-width: 500px; /* Larger images */
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-lg); /* Slightly larger shadow */
+        }
+         .feature-section h2 {
+            /* Uses default h2 styles */
+            margin-bottom: 0.75rem;
+             border-bottom: none; /* Remove default h1 border */
+             display: block;
+             text-align: center; /* Center section title */
+        }
+         .feature-section p {
+             max-width: 700px; /* Limit text width */
+             margin-left: auto;
+             margin-right: auto;
+             font-size: 1rem;
+             color: var(--text-muted);
+             line-height: 1.6; /* Improve readability */
+        }
+        /* Optional: Style bold text */
+        .feature-section b {
+             color: var(--text-default); /* Make bold text slightly less muted */
+             font-weight: 600; /* Ensure it's visibly bold */
+        }
+    </style>
+</head>
+<body>
+    <div class="mouse-follower"></div>
+    <!-- Navbar (Keep as is) -->
+    <nav class="navbar"> <a href="index.html#home" class="logo"> <i class="fas fa-dumbbell logo-icon"></i> <span>Muscular System</span> </a> <ul class="nav-links"> <li><a href="index.html#home" class="nav-link"><i class="fas fa-home nav-icon"></i><span class="nav-label">Home</span></a></li> <li><a href="index.html#explorer" class="nav-link"><i class="fas fa-cube nav-icon"></i><span class="nav-label">3D Explorer</span></a></li> <li><a href="index.html#foundations" class="nav-link"><i class="fas fa-book nav-icon"></i><span class="nav-label">Foundations</span></a></li> <li><a href="index.html#applications" class="nav-link"><i class="fas fa-flask nav-icon"></i><span class="nav-label">Applications</span></a></li> <li><a href="index.html#research" class="nav-link"><i class="fas fa-microscope nav-icon"></i><span class="nav-label">Research</span></a></li> </ul> <div class="nav-actions"> <button class="nav-action-btn search-btn" aria-label="Search"><i class="fas fa-search"></i></button> <button class="nav-action-btn theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button> </div> </nav>
+    <!-- Main Content -->
+    <main class="detail-content">
+        <h1>Sports Medicine & Performance</h1>
+        <p style="text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">Key areas where understanding muscle function impacts <b>athletic training</b>, <b>injury management</b>, and <b>performance</b>.</p>
+
+        <div class="feature-section">
+             <img src="ath1.jpeg" alt="Motion analysis setup">
+             <h2>Biomechanics & Movement Analysis</h2>
+             <p>Using technology like <b>motion capture</b> and <b>force plates</b> to analyze <b>athletic movements</b> (running, jumping, throwing) helps identify <b>technique flaws</b>, <b>muscle imbalances</b>, and factors contributing to <b>potential injury</b>.</p>
+        </div>
+
+        <div class="feature-section">
+             <img src="recovery.jpeg" alt="Athlete doing strength training">
+             <h2>Injury Prevention & Conditioning</h2>
+             <p>Targeted <b>strength and conditioning programs</b>, proper <b>warm-ups</b>, <b>flexibility work</b>, and careful <b>load management</b> are crucial for preparing muscles for the demands of sport and reducing common injuries like <b>strains</b> and <b>sprains</b>.</p>
+        </div>
+
+         <div class="feature-section">
+             <img src="strength.avif" alt="Sports recovery methods">
+             <h2>Performance Optimization & Recovery</h2>
+             <p>Applying principles of <b>muscle physiology</b>, <b>nutrition</b>, <b>hydration</b>, and <b>recovery techniques</b> (<b>massage</b>, <b>cryotherapy</b>, <b>sleep</b>) helps athletes <b>adapt to training</b>, perform at their <b>peak</b>, and minimize <b>fatigue</b>.</p>
+        </div>
+
+        <a href="index.html#applications" class="back-link" style="display: block; text-align: center;"> <i class="fas fa-arrow-left"></i> Back to Applications </a>
+    </main>
+    <!-- Footer (Keep as is - assuming social links were updated previously) -->
+     <footer class="footer"> <div class="footer-content"> <div class="footer-section"> <h4>Connect With Us</h4> <p>Follow us...</p> <div class="social-links"> <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> <a href="#" class="social-link" aria-label="Github"><i class="fab fa-github"></i></a> <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a> </div> </div> <div class="footer-section"> <h4>About</h4> <p>An interactive platform...</p> <ul style="list-style: none; padding: 0; margin-top: 1rem; font-size: 0.9rem; line-height: 1.8;"> <li><a href="index.html#explorer" style="color: var(--text-muted); text-decoration: none;">3D Explorer</a></li> <li><a href="index.html#foundations" style="color: var(--text-muted); text-decoration: none;">Foundations</a></li> <li><a href="#" style="color: var(--text-muted); text-decoration: none;">Contact Us</a></li> </ul> </div> <div class="footer-section"> <h4>Newsletter</h4> <p>Stay updated...</p> <form class="newsletter-form"> <input type="email" placeholder="Your email address" required aria-label="Email for newsletter"> <button type="submit">Subscribe</button> </form> </div> </div> <div class="footer-bottom"> <p>© <span id="current-year">2024</span> Muscular System Explorer. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p> </div> </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

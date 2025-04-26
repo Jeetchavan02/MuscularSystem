@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscle Types Comparison - Muscular System Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific layout for this page */
+        .type-comparison {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .muscle-type-column {
+            background-color: rgba(var(--primary-accent-rgb, 158, 43, 37), 0.05); /* Subtle background */
+            border: 1px solid rgba(var(--primary-accent-rgb, 158, 43, 37), 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        body.light-theme .muscle-type-column {
+             background-color: rgba(var(--primary-accent-rgb, 158, 43, 37), 0.03);
+             border-color: #eee;
+        }
+        .muscle-type-column img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .muscle-type-column h3 {
+            color: var(--secondary-accent);
+            margin-bottom: 0.75rem;
+            font-size: 1.2em;
+        }
+        .muscle-type-column p {
+            font-size: 0.9em;
+            text-align: left;
+            color: var(--text-muted);
+        }
+        .muscle-type-column ul {
+            font-size: 0.9em;
+            text-align: left;
+            list-style-position: inside;
+            padding-left: 0;
+            color: var(--text-muted);
+            list-style-type: none; /* Remove default bullets if desired */
+        }
+        .muscle-type-column li {
+            margin-bottom: 0.5rem; /* Increased spacing slightly */
+            line-height: 1.4; /* Improve readability */
+        }
+        /* Optional: Style the bold text slightly */
+        .muscle-type-column li b {
+             color: var(--text-default); /* Make bold text slightly less muted */
+             margin-right: 0.3em; /* Add space after the bold label */
+        }
+
+        @media (max-width: 992px) {
+            .type-comparison {
+                grid-template-columns: 1fr; /* Stack columns */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mouse-follower"></div>
+    <!-- Navbar (Keep as is) -->
+    <nav class="navbar">
+        <a href="index.html#home" class="logo"> <i class="fas fa-dumbbell logo-icon"></i> <span>Muscular System</span> </a>
+        <ul class="nav-links">
+            <li><a href="index.html#home" class="nav-link"><i class="fas fa-home nav-icon"></i><span class="nav-label">Home</span></a></li>
+            <li><a href="index.html#explorer" class="nav-link"><i class="fas fa-cube nav-icon"></i><span class="nav-label">3D Explorer</span></a></li>
+            <li><a href="index.html#foundations" class="nav-link"><i class="fas fa-book nav-icon"></i><span class="nav-label">Foundations</span></a></li>
+            <li><a href="index.html#applications" class="nav-link"><i class="fas fa-flask nav-icon"></i><span class="nav-label">Applications</span></a></li>
+            <li><a href="index.html#research" class="nav-link"><i class="fas fa-microscope nav-icon"></i><span class="nav-label">Research</span></a></li>
+        </ul>
+        <div class="nav-actions"> <button class="nav-action-btn search-btn" aria-label="Search"><i class="fas fa-search"></i></button> <button class="nav-action-btn theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button> </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="detail-content">
+        <h1>Comparing Muscle Types</h1>
+        <p>A side-by-side look at the structure and key features of skeletal, cardiac, and smooth muscle.</p>
+
+        <div class="type-comparison">
+            <!-- Column 1: Skeletal -->
+            <div class="muscle-type-column">
+                <img src="skeletal.jpeg" alt="Skeletal Muscle Microscopic View">
+                <h3>Skeletal Muscle</h3>
+                <ul>
+                    <li><b>Structure:</b> Striated, long fibers, multinucleated</li>
+                    <li><b>Control:</b> Voluntary</li>
+                    <li><b>Location:</b> Attached to bones</li>
+                    <li><b>Function:</b> Movement, posture</li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Cardiac -->
+            <div class="muscle-type-column">
+                <img src="cardiac.jpeg" alt="Cardiac Muscle Microscopic View">
+                <h3>Cardiac Muscle</h3>
+                 <ul>
+                    <li><b>Structure:</b> Striated, branched cells, intercalated discs</li>
+                    <li><b>Control:</b> Involuntary</li>
+                    <li><b>Location:</b> Heart wall</li>
+                    <li><b>Function:</b> Pumping blood</li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Smooth -->
+            <div class="muscle-type-column">
+                <img src="smooth.jpeg" alt="Smooth Muscle Microscopic View">
+                <h3>Smooth Muscle</h3>
+                <ul>
+                    <li><b>Structure:</b> Non-striated, spindle-shaped cells</li>
+                    <li><b>Control:</b> Involuntary</li>
+                    <li><b>Location:</b> Walls of organs/vessels</li>
+                    <li><b>Function:</b> Internal movement</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="index.html#foundations" class="back-link" style="margin-top: 3rem;"> <i class="fas fa-arrow-left"></i> Back to Foundations </a>
+    </main>
+    <!-- Footer (Keep as is - assuming social links were updated previously) -->
+     <footer class="footer"> <div class="footer-content"> <div class="footer-section"> <h4>Connect With Us</h4> <p>Follow us...</p> <div class="social-links"> <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> <a href="#" class="social-link" aria-label="Github"><i class="fab fa-github"></i></a> <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a> </div> </div> <div class="footer-section"> <h4>About</h4> <p>An interactive platform...</p> <ul style="list-style: none; padding: 0; margin-top: 1rem; font-size: 0.9rem; line-height: 1.8;"> <li><a href="index.html#explorer" style="color: var(--text-muted); text-decoration: none;">3D Explorer</a></li> <li><a href="index.html#foundations" style="color: var(--text-muted); text-decoration: none;">Foundations</a></li> <li><a href="#" style="color: var(--text-muted); text-decoration: none;">Contact Us</a></li> </ul> </div> <div class="footer-section"> <h4>Newsletter</h4> <p>Stay updated...</p> <form class="newsletter-form"> <input type="email" placeholder="Your email address" required aria-label="Email for newsletter"> <button type="submit">Subscribe</button> </form> </div> </div> <div class="footer-bottom"> <p>© <span id="current-year">2024</span> Muscular System Explorer. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p> </div> </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

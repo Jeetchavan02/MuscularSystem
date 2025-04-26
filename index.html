@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscular System Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Link the EXTERNAL stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Add class="light-theme" here for theme testing -->
+<body>
+    <!-- Mouse Follower -->
+    <div class="mouse-follower"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#home" class="logo">
+            <i class="fas fa-dumbbell logo-icon"></i>
+            <span>Muscular System</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active"><i class="fas fa-home nav-icon"></i><span class="nav-label">Home</span></a></li>
+            <li><a href="#explorer" class="nav-link"><i class="fas fa-cube nav-icon"></i><span class="nav-label">3D Explorer</span></a></li>
+            <li><a href="#foundations" class="nav-link"><i class="fas fa-book nav-icon"></i><span class="nav-label">Foundations</span></a></li>
+            <li><a href="#applications" class="nav-link"><i class="fas fa-flask nav-icon"></i><span class="nav-label">Applications</span></a></li>
+            <li><a href="#research" class="nav-link"><i class="fas fa-microscope nav-icon"></i><span class="nav-label">Research</span></a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="nav-action-btn search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+            <button class="nav-action-btn theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Explore the Human Muscular System</h1>
+            <p>Discover the intricate network of muscles that power human movement through our interactive 3D explorer and detailed anatomical visualizations.</p>
+            <div class="cta-buttons">
+                <a href="#explorer" class="cta-button primary">Launch Explorer</a>
+                <a href="#foundations" class="cta-button secondary">Learn Anatomy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Explorer Section -->
+    <section id="explorer" class="section">
+        <h2>Interactive 3D Explorer</h2>
+        <p>Manipulate our detailed anatomical model to study muscle groups, layers, and their relationships in three dimensions.</p>
+        <div class="model-viewer">
+            <div class="sketchfab-embed-wrapper">
+                <iframe title="Human Bones and Muscles" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/85636205977d44878fc729fde5b77cd3/embed?autostart=1&ui_theme=dark&ui_infos=0&ui_controls=1&ui_stop=0&ui_watermark=0"></iframe>
+                 <p class="model-credit">Model by <a href="https://sketchfab.com/wanoco4D" target="_blank" rel="noopener">wanoco4D</a> on <a href="https://sketchfab.com" target="_blank" rel="noopener">Sketchfab</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Foundations Section -->
+    <section id="foundations" class="section dark">
+        <h2>Anatomical Foundations</h2>
+        <p>Essential knowledge about muscle types, structure, and function for medical students and anatomy enthusiasts.</p>
+        <div class="card-grid">
+            <div class="card">
+                <!-- Image Path -->
+                <img src="muscletype.jpg" alt="Muscle Types" class="card-image">
+                <h3>Muscle Types</h3>
+                <p>Explore the three main types of muscle tissue: skeletal, cardiac, and smooth muscle, each with unique properties and functions.</p>
+                <!-- Link -->
+                <a href="detail-muscle-types.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="card">
+                 <!-- Image Path -->
+                <img src="structure.svg" alt="Muscle Structure" class="card-image">
+                <h3>Muscle Structure</h3>
+                <p>Understand the hierarchical organization from whole muscles down to individual myofibrils and sarcomeres.</p>
+                 <!-- Link -->
+                <a href="detail-muscle-structure.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="card">
+                 <!-- Image Path -->
+                <img src="musclefunction.jpg" alt="Muscle Function" class="card-image">
+                <h3>Muscle Function</h3>
+                <p>Discover the sliding filament theory, neuromuscular junctions, and the role of ATP in powering muscle contractions.</p>
+                 <!-- Link -->
+                <a href="detail-muscle-function.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Applications Section -->
+    <section id="applications" class="section">
+        <h2>Clinical Applications</h2>
+        <p>Practical medical applications of muscular system knowledge in diagnosis, treatment, and rehabilitation.</p>
+        <div class="card-grid">
+            <div class="card">
+                 <!-- Image Path -->
+                <img src="DiagnosticImaging.jpeg" alt="Diagnostic Imaging" class="card-image">
+                <h3>Diagnostic Imaging</h3>
+                <p>How MRI, CT, ultrasound, and EMG are used to visualize muscles and diagnose neuromuscular disorders.</p>
+                 <!-- Link -->
+                <a href="detail-diagnostic-imaging.html" class="read-more">View Techniques <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="card">
+                 <!-- Image Path -->
+                <img src="rehabilitation.jpeg" alt="Rehabilitation" class="card-image">
+                <h3>Rehabilitation</h3>
+                <p>Therapeutic approaches for muscle recovery after injury, surgery, or neurological conditions.</p>
+                 <!-- Link -->
+                <a href="detail-rehabilitation.html" class="read-more">Explore Therapies <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="card">
+                 <!-- Image Path -->
+                <img src="sportmedicine.jpeg" alt="Sports Medicine" class="card-image">
+                <h3>Sports Medicine</h3>
+                <p>Optimizing athletic performance through muscle physiology and preventing sports-related injuries.</p>
+                 <!-- Link -->
+                <a href="detail-sports-medicine.html" class="read-more">Learn Methods <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section dark">
+        <h2>Cutting-Edge Research</h2>
+        <p>Exploring advancements in muscle-related technology and understanding.</p>
+        <div class="card-grid">
+
+            <!-- Card 1: Updated based on IITK Link -->
+            <div class="card">
+                 <img src="iitk.jpeg" alt="Bio-inspired artificial muscle concept" class="card-image">
+                <h3>Bio-Inspired Artificial Muscle</h3>
+                <p>Researchers at IIT Kanpur developed a lightweight, polymer-based artificial muscle powered by electricity, promising applications in robotics and biomedical devices.</p>
+                 <!-- Link to the actual article -->
+                <a href="https://www.iitk.ac.in/new/bio-inspired-artificial-muscle-developed-at-smss-lab" target="_blank" rel="noopener noreferrer" class="read-more">Read IITK News <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <!-- Card 2: Updated based on ScienceDirect Link -->
+            <div class="card">
+                 <img src="myoelectric.jpeg" alt="Prosthetic arm interface" class="card-image">
+                <h3>Myoelectric Prosthetic Control</h3>
+                <p>Reviewing advanced myoelectric control for prosthetics, covering signal processing, pattern recognition challenges, and future directions like deep learning.</p>
+                 <!-- Link to the abstract -->
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0924424722003478" target="_blank" rel="noopener noreferrer" class="read-more">View Abstract <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <!-- Card 3: REMOVED -->
+            <!-- The card for Genetic Therapies has been deleted -->
+
+        </div>
+        <!-- Removed the link/placeholder span below the cards if it existed -->
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                 <p>Follow us on social media for updates and anatomy insights.</p>
+                <div class="social-links">
+                    <!-- Updated Links -->
+                    <a href="https://www.linkedin.com/in/jeet-chavan-828385325/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Jeetchavan02" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Github"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/jeetchavan02/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+             <div class="footer-section">
+                 <h4>About</h4>
+                 <p>An interactive platform dedicated to the study and appreciation of the human muscular system.</p>
+                 <ul style="list-style: none; padding: 0; margin-top: 1rem; font-size: 0.9rem; line-height: 1.8;">
+                     <li><a href="#explorer" style="color: var(--text-muted); text-decoration: none;">3D Explorer</a></li>
+                     <li><a href="#foundations" style="color: var(--text-muted); text-decoration: none;">Foundations</a></li>
+                     <li><a href="#" style="color: var(--text-muted); text-decoration: none;">Contact Us</a></li>
+                 </ul>
+             </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Stay updated with the latest anatomical discoveries and features.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="current-year">2024</span> Muscular System Explorer. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Link the EXTERNAL script file -->
+    <script src="script.js" defer></script>
+
+</body>
+</html>

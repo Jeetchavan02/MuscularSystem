@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscle Contraction Steps - Muscular System Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific layout for this page */
+        .function-steps {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 2rem;
+            counter-reset: step-counter; /* Initialize counter */
+        }
+        .function-step {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            padding-left: 50px; /* Space for number */
+            padding-bottom: 1.5rem;
+             border-bottom: 1px solid rgba(var(--primary-accent-rgb, 158, 43, 37), 0.1);
+        }
+         .function-step:last-child { border-bottom: none; }
+
+        .function-step::before {
+            counter-increment: step-counter; /* Increment counter */
+            content: counter(step-counter); /* Display counter */
+            position: absolute;
+            left: 0;
+            top: -5px;
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--primary-accent);
+            background-color: rgba(var(--primary-accent-rgb, 158, 43, 37), 0.1);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+        body.light-theme .function-step::before {
+            background-color: rgba(var(--primary-accent-rgb, 158, 43, 37), 0.08);
+        }
+
+        .step-image { flex: 0 0 200px; /* Fixed width for image */ }
+        .step-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: var(--shadow-sm);
+        }
+        .step-text h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-accent);
+            font-size: 1.2em;
+        }
+        .step-text p {
+             font-size: 0.95rem;
+             margin-bottom: 0;
+             color: var(--text-muted);
+             line-height: 1.6; /* Improve readability */
+        }
+        /* Optional: Style bold text */
+        .step-text b {
+             color: var(--text-default); /* Make bold text slightly less muted */
+             font-weight: 600; /* Ensure it's visibly bold */
+        }
+
+
+        @media (max-width: 768px) {
+            .function-step {
+                flex-direction: column;
+                padding-left: 0;
+                padding-top: 50px; /* Space for number above */
+                align-items: center;
+                text-align: center;
+            }
+            .function-step::before {
+                 left: 50%;
+                 transform: translateX(-50%);
+                 top: 5px;
+            }
+             .step-image { flex-basis: auto; max-width: 300px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="mouse-follower"></div>
+    <!-- Navbar (Keep as is) -->
+    <nav class="navbar"> <a href="index.html#home" class="logo"> <i class="fas fa-dumbbell logo-icon"></i> <span>Muscular System</span> </a> <ul class="nav-links"> <li><a href="index.html#home" class="nav-link"><i class="fas fa-home nav-icon"></i><span class="nav-label">Home</span></a></li> <li><a href="index.html#explorer" class="nav-link"><i class="fas fa-cube nav-icon"></i><span class="nav-label">3D Explorer</span></a></li> <li><a href="index.html#foundations" class="nav-link"><i class="fas fa-book nav-icon"></i><span class="nav-label">Foundations</span></a></li> <li><a href="index.html#applications" class="nav-link"><i class="fas fa-flask nav-icon"></i><span class="nav-label">Applications</span></a></li> <li><a href="index.html#research" class="nav-link"><i class="fas fa-microscope nav-icon"></i><span class="nav-label">Research</span></a></li> </ul> <div class="nav-actions"> <button class="nav-action-btn search-btn" aria-label="Search"><i class="fas fa-search"></i></button> <button class="nav-action-btn theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button> </div> </nav>
+    <!-- Main Content -->
+    <main class="detail-content">
+        <h1>Muscle Function: Step-by-Step</h1>
+        <p>Follow the sequence of events that lead to skeletal muscle contraction and relaxation.</p>
+
+        <ol class="function-steps">
+            <!-- Step 1 -->
+            <li class="function-step">
+                <div class="step-image">
+                     <img src="neuron1.jpg" alt="Neuron releasing neurotransmitter">
+                </div>
+                <div class="step-text">
+                    <h3>Neural Signal Arrives</h3>
+                    <p>An <b>action potential</b> travels down a <b>motor neuron</b> to the <b>neuromuscular junction (NMJ)</b>.</p>
+                </div>
+            </li>
+            <!-- Step 2 -->
+             <li class="function-step">
+                 <div class="step-image">
+                      <img src="ace.jpg" alt="Acetylcholine at synaptic cleft">
+                 </div>
+                <div class="step-text">
+                    <h3>ACh Release & Binding</h3>
+                    <p><b>Acetylcholine (ACh)</b> is released into the <b>synaptic cleft</b> and binds to receptors on the muscle fiber's <b>sarcolemma</b>.</p>
+                </div>
+            </li>
+             <!-- Step 3 -->
+            <li class="function-step">
+                 <div class="step-image">
+                      <img src="CaSR.jpg" alt="Calcium release from SR">
+                 </div>
+                <div class="step-text">
+                    <h3>Calcium Ion Release</h3>
+                    <p>The resulting <b>muscle action potential</b> travels down <b>T-tubules</b>, triggering <b>Ca²⁺</b> release from the <b>sarcoplasmic reticulum (SR)</b>.</p>
+                </div>
+            </li>
+             <!-- Step 4 -->
+            <li class="function-step">
+                 <div class="step-image">
+                      <img src="ActNMyo.jpg" alt="Actin and Myosin interaction">
+                 </div>
+                <div class="step-text">
+                    <h3>Cross-Bridge Cycling</h3>
+                    <p><b>Ca²⁺</b> binds to <b>troponin</b>, exposing <b>actin binding sites</b>. <b>Myosin heads</b> bind, perform the <b>power stroke</b> (pulling <b>actin</b>), detach (using <b>ATP</b>), and re-cock, shortening the <b>sarcomere</b>.</p>
+                </div>
+            </li>
+             <!-- Step 5 -->
+            <li class="function-step">
+                 <div class="step-image">
+                      <img src="CaPump.jpeg" alt="Calcium pump returning Ca to SR">
+                 </div>
+                <div class="step-text">
+                    <h3>Relaxation</h3>
+                    <p><b>Nerve signal</b> stops, <b>ACh</b> is removed, <b>Ca²⁺</b> is pumped back into the <b>SR</b>, <b>tropomyosin</b> blocks <b>binding sites</b>, and the muscle relaxes.</p>
+                </div>
+            </li>
+        </ol>
+
+        <a href="index.html#foundations" class="back-link"> <i class="fas fa-arrow-left"></i> Back to Foundations </a>
+    </main>
+    <!-- Footer (Keep as is - assuming social links were updated previously) -->
+     <footer class="footer"> <div class="footer-content"> <div class="footer-section"> <h4>Connect With Us</h4> <p>Follow us...</p> <div class="social-links"> <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> <a href="#" class="social-link" aria-label="Github"><i class="fab fa-github"></i></a> <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a> </div> </div> <div class="footer-section"> <h4>About</h4> <p>An interactive platform...</p> <ul style="list-style: none; padding: 0; margin-top: 1rem; font-size: 0.9rem; line-height: 1.8;"> <li><a href="index.html#explorer" style="color: var(--text-muted); text-decoration: none;">3D Explorer</a></li> <li><a href="index.html#foundations" style="color: var(--text-muted); text-decoration: none;">Foundations</a></li> <li><a href="#" style="color: var(--text-muted); text-decoration: none;">Contact Us</a></li> </ul> </div> <div class="footer-section"> <h4>Newsletter</h4> <p>Stay updated...</p> <form class="newsletter-form"> <input type="email" placeholder="Your email address" required aria-label="Email for newsletter"> <button type="submit">Subscribe</button> </form> </div> </div> <div class="footer-bottom"> <p>© <span id="current-year">2024</span> Muscular System Explorer. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p> </div> </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

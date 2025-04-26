@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic Imaging Techniques - Muscular System Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styles for this page layout */
+        .imaging-technique {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(var(--primary-accent-rgb, 158, 43, 37), 0.2);
+            display: flex; /* Use flexbox for layout */
+            gap: 2rem;
+            align-items: flex-start; /* Align items at the top */
+        }
+         .imaging-technique:last-child {
+             border-bottom: none;
+             margin-bottom: 0;
+         }
+
+        .technique-image {
+            flex: 0 0 35%; /* Image takes roughly 1/3 */
+            max-width: 300px; /* Limit image width */
+        }
+        .technique-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .technique-details {
+            flex: 1; /* Text takes remaining space */
+        }
+
+        .technique-details h2 {
+            /* Uses default h2 styles */
+            margin-bottom: 0.75rem;
+            display: flex; /* Align icon and text */
+            align-items: center;
+            gap: 0.75rem;
+            font-size: clamp(1.5rem, 3.5vw, 2rem); /* Adjust size */
+            border-bottom: none; /* Remove default border */
+            padding-bottom: 0;
+        }
+         .technique-details h2 i {
+            color: var(--secondary-accent); /* Icon color */
+            font-size: 0.9em; /* Slightly smaller icon */
+        }
+
+        .technique-details .principle {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95em;
+            line-height: 1.6; /* Improve readability */
+        }
+
+        .technique-details h3 { /* For Pros/Cons */
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1em;
+            color: var(--primary-accent);
+        }
+
+        .technique-details ul {
+            font-size: 0.9em;
+            margin-left: 0; /* Remove default indent if using custom padding */
+            padding-left: 1.2rem; /* Add padding for bullets */
+            list-style: disc; /* Ensure bullets show */
+            line-height: 1.6; /* Improve readability */
+        }
+        .technique-details li {
+             margin-bottom: 0.4rem;
+        }
+        /* Optional: Style bold text */
+        .technique-details b {
+             color: var(--text-default); /* Make bold text slightly less muted */
+             font-weight: 600; /* Ensure it's visibly bold */
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .imaging-technique {
+                flex-direction: column; /* Stack image and text */
+                align-items: center; /* Center items */
+                text-align: center;
+            }
+            .technique-image {
+                flex-basis: auto; /* Reset basis */
+                max-width: 80%; /* Allow image to be wider */
+                margin-bottom: 1rem;
+            }
+            .technique-details {
+                 width: 100%;
+            }
+            .technique-details h2 {
+                justify-content: center; /* Center icon and title */
+            }
+             .technique-details ul {
+                text-align: left; /* Keep lists left-aligned */
+                 padding-left: 1.5rem; /* Adjust padding for centered layout */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mouse-follower"></div>
+    <!-- Navbar (Keep as is) -->
+    <nav class="navbar"> <a href="index.html#home" class="logo"> <i class="fas fa-dumbbell logo-icon"></i> <span>Muscular System</span> </a> <ul class="nav-links"> <li><a href="index.html#home" class="nav-link"><i class="fas fa-home nav-icon"></i><span class="nav-label">Home</span></a></li> <li><a href="index.html#explorer" class="nav-link"><i class="fas fa-cube nav-icon"></i><span class="nav-label">3D Explorer</span></a></li> <li><a href="index.html#foundations" class="nav-link"><i class="fas fa-book nav-icon"></i><span class="nav-label">Foundations</span></a></li> <li><a href="index.html#applications" class="nav-link"><i class="fas fa-flask nav-icon"></i><span class="nav-label">Applications</span></a></li> <li><a href="index.html#research" class="nav-link"><i class="fas fa-microscope nav-icon"></i><span class="nav-label">Research</span></a></li> </ul> <div class="nav-actions"> <button class="nav-action-btn search-btn" aria-label="Search"><i class="fas fa-search"></i></button> <button class="nav-action-btn theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button> </div> </nav>
+
+    <!-- Main Content -->
+    <main class="detail-content">
+        <h1>Diagnostic Imaging Techniques</h1>
+        <p>Visualizing muscles and related structures is key to diagnosing injuries and diseases. Different techniques offer unique advantages for specific clinical questions.</p>
+        <hr style="margin: 2rem 0; border-color: rgba(158, 43, 37, 0.2);">
+
+        <!-- Technique 1: MRI -->
+        <section class="imaging-technique">
+            <div class="technique-image">
+                <img src="MRI.png" alt="CT and MRI scans showing a soft tissue growth in the right skull base region with its various extensions (a, b, c). Gross specimen revealed a lobulated dense rubbery mass">
+            </div>
+            <div class="technique-details">
+                <h2><i class="fas fa-magnet"></i> MRI (Magnetic Resonance Imaging)</h2>
+                <p class="principle">Uses strong <b>magnetic fields</b> and <b>radio waves</b> to create detailed images based on <b>water content</b> in tissues.</p>
+                <h3>Advantages & Uses:</h3>
+                <ul>
+                    <li>Excellent <b>soft tissue contrast</b> (<b>muscles</b>, <b>tendons</b>, <b>ligaments</b>, <b>nerves</b>).</li>
+                    <li>Detects <b>tears</b>, <b>strains</b>, <b>inflammation</b>, <b>edema</b>, <b>tumors</b>.</li>
+                    <li>No <b>ionizing radiation</b>.</li>
+                    <li><b>Multi-planar imaging</b>.</li>
+                </ul>
+                <h3>Limitations:</h3>
+                <ul>
+                    <li>Expensive, time-consuming, noisy.</li>
+                    <li>Contraindicated with certain implants.</li>
+                    <li>Less detail for <b>bone structure</b>.</li>
+                    <li>Can induce <b>claustrophobia</b>.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technique 2: CT -->
+        <section class="imaging-technique">
+             <div class="technique-image">
+                <img src="CTboneMuscle.jpeg" alt="Example CT scan slice showing bone and muscle">
+            </div>
+            <div class="technique-details">
+                 <h2><i class="fas fa-x-ray"></i> CT (Computed Tomography)</h2>
+                 <p class="principle">Combines multiple <b>X-ray images</b> taken from different angles to produce <b>cross-sectional views</b>.</p>
+                 <h3>Advantages & Uses:</h3>
+                 <ul>
+                    <li>Excellent <b>bone detail</b>.</li>
+                    <li>Fast acquisition time.</li>
+                    <li>Good for <b>complex fractures</b> involving <b>muscle attachments</b>.</li>
+                    <li>Detects <b>calcifications</b>, large <b>hematomas</b>, <b>abscesses</b>.</li>
+                    <li>Useful for <b>biopsy guidance</b>.</li>
+                </ul>
+                 <h3>Limitations:</h3>
+                 <ul>
+                     <li>Uses <b>ionizing radiation</b>.</li>
+                     <li>Less <b>soft tissue detail</b> compared to MRI.</li>
+                 </ul>
+            </div>
+        </section>
+
+        <!-- Technique 3: Ultrasound -->
+         <section class="imaging-technique">
+             <div class="technique-image">
+                <img src="ultrasound.jpeg" alt="Ultrasound probe imaging a muscle or tendon">
+            </div>
+            <div class="technique-details">
+                 <h2><i class="fas fa-volume-up"></i> Ultrasound (Sonography)</h2>
+                 <p class="principle">Uses high-frequency <b>sound waves</b> to create <b>real-time images</b> (<b>echos</b> reflecting off tissues).</p>
+                  <h3>Advantages & Uses:</h3>
+                 <ul>
+                    <li><b>Real-time imaging</b>, allows <b>dynamic assessment</b> (movement).</li>
+                    <li>Excellent for <b>superficial structures</b>.</li>
+                    <li>No <b>ionizing radiation</b>, portable, relatively inexpensive.</li>
+                    <li>Detects <b>tears</b>, <b>tendinopathy</b>, <b>fluid collections</b>.</li>
+                    <li>Effective for <b>guiding injections</b> and <b>aspirations</b>.</li>
+                </ul>
+                 <h3>Limitations:</h3>
+                 <ul>
+                     <li><b>Operator-dependent</b> skill level.</li>
+                     <li>Limited <b>penetration</b> for <b>deep structures</b>.</li>
+                     <li><b>Bone</b> blocks sound waves.</li>
+                 </ul>
+            </div>
+        </section>
+
+         <!-- Technique 4: EMG/NCS -->
+         <section class="imaging-technique">
+             <div class="technique-image">
+                <img src="EMG.jpg" alt="Illustration of EMG needle">
+            </div>
+            <div class="technique-details">
+                 <h2><i class="fas fa-bolt"></i> EMG / NCS</h2>
+                 <p class="principle"><b>Functional tests</b>, not anatomical imaging. EMG measures <b>electrical activity</b> within muscles; NCS measures <b>nerve conduction velocity</b>.</p>
+                 <h3>Advantages & Uses:</h3>
+                 <ul>
+                    <li>Assesses <b>nerve</b> and <b>muscle health/function</b>.</li>
+                    <li>Differentiates <b>nerve vs. muscle disorders</b>.</li>
+                    <li>Diagnoses <b>neuropathies</b>, <b>myopathies</b>, <b>radiculopathies</b>, <b>neuromuscular junction disorders</b>.</li>
+                </ul>
+                 <h3>Limitations:</h3>
+                 <ul>
+                     <li>Can be uncomfortable (especially <b>needle EMG</b>).</li>
+                     <li>Provides <b>functional data</b>, not detailed <b>anatomy</b>.</li>
+                     <li>Interpretation requires expertise.</li>
+                 </ul>
+            </div>
+        </section>
+
+        <a href="index.html#applications" class="back-link" style="margin-top: 1rem;"> <i class="fas fa-arrow-left"></i> Back to Applications </a>
+    </main>
+    <!-- Footer (Keep as is - assuming social links were updated previously) -->
+    <footer class="footer"> <div class="footer-content"> <div class="footer-section"> <h4>Connect With Us</h4> <p>Follow us...</p> <div class="social-links"> <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> <a href="#" class="social-link" aria-label="Github"><i class="fab fa-github"></i></a> <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a> </div> </div> <div class="footer-section"> <h4>About</h4> <p>An interactive platform...</p> <ul style="list-style: none; padding: 0; margin-top: 1rem; font-size: 0.9rem; line-height: 1.8;"> <li><a href="index.html#explorer" style="color: var(--text-muted); text-decoration: none;">3D Explorer</a></li> <li><a href="index.html#foundations" style="color: var(--text-muted); text-decoration: none;">Foundations</a></li> <li><a href="#" style="color: var(--text-muted); text-decoration: none;">Contact Us</a></li> </ul> </div> <div class="footer-section"> <h4>Newsletter</h4> <p>Stay updated...</p> <form class="newsletter-form"> <input type="email" placeholder="Your email address" required aria-label="Email for newsletter"> <button type="submit">Subscribe</button> </form> </div> </div> <div class="footer-bottom"> <p>© <span id="current-year">2024</span> Muscular System Explorer. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p> </div> </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

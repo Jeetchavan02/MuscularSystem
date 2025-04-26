@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscle Structure Hierarchy - Muscular System Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific layout for this page */
+        .structure-level {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px dashed rgba(var(--primary-accent-rgb, 158, 43, 37), 0.2);
+        }
+        .structure-level:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+        .structure-image, .structure-text {
+            flex: 1; /* Take up half the space */
+        }
+        .structure-image img {
+            width: 100%;
+            max-width: 400px; /* Limit image size */
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            display: block; /* Remove extra space */
+            margin: 0 auto; /* Center image if container is wider */
+        }
+         .structure-text h3 {
+            color: var(--secondary-accent);
+            margin-bottom: 0.75rem;
+        }
+        .structure-text p {
+             font-size: 0.95rem;
+             color: var(--text-muted);
+             line-height: 1.6; /* Improve readability */
+        }
+        /* Optional: Style bold text */
+        .structure-text b {
+             color: var(--text-default); /* Make bold text slightly less muted */
+             font-weight: 600; /* Ensure it's visibly bold */
+        }
+
+        /* Alternate layout for even-numbered sections */
+        .structure-level:nth-child(even) {
+            /* Keep default flex-direction: row; */
+        }
+         .structure-level:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        @media (max-width: 768px) {
+            .structure-level, .structure-level:nth-child(odd) {
+                flex-direction: column; /* Stack on smaller screens */
+                gap: 1.5rem;
+                 text-align: center;
+            }
+             .structure-image img { max-width: 100%; }
+             .structure-text h3 { margin-top: 1rem;}
+        }
+    </style>
+</head>
+<body>
+    <div class="mouse-follower"></div>
+    <!-- Navbar (Keep as is) -->
+    <nav class="navbar"> <a href="index.html#home" class="logo"> <i class="fas fa-dumbbell logo-icon"></i> <span>Muscular System</span> </a> <ul class="nav-links"> <li><a href="index.html#home" class="nav-link"><i class="fas fa-home nav-icon"></i><span class="nav-label">Home</span></a></li> <li><a href="index.html#explorer" class="nav-link"><i class="fas fa-cube nav-icon"></i><span class="nav-label">3D Explorer</span></a></li> <li><a href="index.html#foundations" class="nav-link"><i class="fas fa-book nav-icon"></i><span class="nav-label">Foundations</span></a></li> <li><a href="index.html#applications" class="nav-link"><i class="fas fa-flask nav-icon"></i><span class="nav-label">Applications</span></a></li> <li><a href="index.html#research" class="nav-link"><i class="fas fa-microscope nav-icon"></i><span class="nav-label">Research</span></a></li> </ul> <div class="nav-actions"> <button class="nav-action-btn search-btn" aria-label="Search"><i class="fas fa-search"></i></button> <button class="nav-action-btn theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button> </div> </nav>
+    <!-- Main Content -->
+    <main class="detail-content">
+        <h1>Muscle Structure Hierarchy</h1>
+        <p>Skeletal muscle is organized in layers, from the large muscle organ down to microscopic protein filaments.</p>
+
+        <!-- Level 1: Whole Muscle & Fascicles -->
+        <div class="structure-level">
+            <div class="structure-image">
+                <img src="MuscleFascicles.jpg" alt="Diagram showing whole muscle covered by epimysium and internal fascicles">
+            </div>
+            <div class="structure-text">
+                <h3>Muscle & Fascicles</h3>
+                <p>The entire muscle organ is wrapped in <b>Epimysium</b>. Inside, bundles of muscle cells called <b>Fascicles</b> are separated by <b>Perimysium</b>.</p>
+            </div>
+        </div>
+
+        <!-- Level 2: Muscle Fibers -->
+        <div class="structure-level">
+            <div class="structure-image">
+                <img src="Musclefiber .jpeg" alt="Diagram showing a fascicle with individual muscle fibers surrounded by endomysium">
+            </div>
+            <div class="structure-text">
+                <h3>Muscle Fiber (Cell)</h3>
+                <p>Each fascicle contains many <b>Muscle Fibers</b> (cells). These long, multinucleated cells are individually wrapped in <b>Endomysium</b>.</p>
+            </div>
+        </div>
+
+        <!-- Level 3: Myofibrils -->
+        <div class="structure-level">
+            <div class="structure-image">
+                <img src="Myofibrils.png" alt="Diagram of a muscle fiber cross-section showing densely packed myofibrils">
+            </div>
+            <div class="structure-text">
+                <h3>Myofibrils</h3>
+                <p>Within each muscle fiber are numerous <b>Myofibrils</b>, the contractile organelles that run the cell's length.</p>
+            </div>
+        </div>
+
+        <!-- Level 4: Sarcomeres & Filaments -->
+        <div class="structure-level">
+            <div class="structure-image">
+                 <img src="sarcomere.png" alt="Detailed diagram of a sarcomere showing actin, myosin, Z-discs">
+            </div>
+            <div class="structure-text">
+                <h3>Sarcomeres & Filaments</h3>
+                <p>Myofibrils consist of repeating <b>Sarcomeres</b>, the basic contractile units. Sarcomeres contain thick <b>Myosin</b> and thin <b>Actin</b> filaments, whose interaction causes contraction.</p>
+            </div>
+        </div>
+
+        <a href="index.html#foundations" class="back-link"> <i class="fas fa-arrow-left"></i> Back to Foundations </a>
+    </main>
+    <!-- Footer (Keep as is - assuming social links were updated previously) -->
+     <footer class="footer"> <div class="footer-content"> <div class="footer-section"> <h4>Connect With Us</h4> <p>Follow us...</p> <div class="social-links"> <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> <a href="#" class="social-link" aria-label="Github"><i class="fab fa-github"></i></a> <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a> </div> </div> <div class="footer-section"> <h4>About</h4> <p>An interactive platform...</p> <ul style="list-style: none; padding: 0; margin-top: 1rem; font-size: 0.9rem; line-height: 1.8;"> <li><a href="index.html#explorer" style="color: var(--text-muted); text-decoration: none;">3D Explorer</a></li> <li><a href="index.html#foundations" style="color: var(--text-muted); text-decoration: none;">Foundations</a></li> <li><a href="#" style="color: var(--text-muted); text-decoration: none;">Contact Us</a></li> </ul> </div> <div class="footer-section"> <h4>Newsletter</h4> <p>Stay updated...</p> <form class="newsletter-form"> <input type="email" placeholder="Your email address" required aria-label="Email for newsletter"> <button type="submit">Subscribe</button> </form> </div> </div> <div class="footer-bottom"> <p>© <span id="current-year">2024</span> Muscular System Explorer. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p> </div> </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
